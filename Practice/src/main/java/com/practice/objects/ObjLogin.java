@@ -8,10 +8,10 @@ public class ObjLogin {
 	
 	WebDriver driver;
 	
-	By account=By.id("account");
-	By user=By.xpath(".//input[@id='log']");
-	By pass=By.xpath(".//input[@id='pwd']");
-	By login=By .xpath(".//input[@id='login']");
+	By btnLogin=By.id("login");
+	By txtUser=By.id("userName");
+	By txtPass=By.id("password");
+	By btnLogin2=By.id("login");
 	
 	public ObjLogin(WebDriver driver) {
 		this.driver=driver;
@@ -19,19 +19,19 @@ public class ObjLogin {
 
 	public WebElement signIn()
 	{
-		return driver.findElement(account);
+		return driver.findElement(btnLogin);
 	}
 	public WebElement username()
 	{
-		return driver.findElement(user);
+		return driver.findElement(txtUser);
 	}
 	public WebElement password()
 	{
-		return driver.findElement(pass);
+		return driver.findElement(txtPass);
 	}
 	public WebElement login()
 	{
-		return driver.findElement(login);
+		return driver.findElement(btnLogin2);
 	}
 
 }
